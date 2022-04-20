@@ -10,7 +10,11 @@ import java.util.Optional;
 // 서비스단은 네이밍 비지니스적으로!
 public class MemberService{
 
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    private final MemberRepository memberRepository;
+
+    public MemberService(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 
     // 회원가입
     public Long join(Member member){
