@@ -6,6 +6,10 @@ import java.util.*;
 
 public class MemoryMemberRepository implements MemberRepository {
 
+    public void clearStore(){
+        store.clear();
+    }
+
     private static Map<Long, Member> store = new HashMap<>();
     private static Long sequence = 0L;
 
@@ -32,4 +36,5 @@ public class MemoryMemberRepository implements MemberRepository {
     public List<Member> findAll() {
         return new ArrayList<>(store.values());
     }
-}
+    }
+
