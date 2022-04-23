@@ -7,4 +7,4 @@ create table member
 );
 
 insert into member(name) values('Juyeon');
-insert into member(name) values('Younghun'); 
+insert into member(name) values('Younghun');
