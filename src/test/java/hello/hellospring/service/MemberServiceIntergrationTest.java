@@ -47,11 +47,4 @@ class MemberServiceIntergrationTest {
 
     }
 
-    @Test
-    void findMembers() {
-    }
-
-    @Test
-    void findOne() {
-    }
 }
