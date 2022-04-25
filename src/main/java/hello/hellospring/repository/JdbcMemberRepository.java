@@ -1,6 +1,8 @@
 package hello.hellospring.repository;
 import hello.hellospring.domain.Member;
 import org.springframework.jdbc.datasource.DataSourceUtils;
+
+import javax.persistence.EntityManager;
 import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
@@ -9,8 +11,8 @@ import java.util.Optional;
 public class JdbcMemberRepository implements MemberRepository {
     private final DataSource dataSource;
 
-    public JdbcMemberRepository(DataSource dataSource) {
-        this.dataSource = dataSource;
+    public JdbcMemberRepository(EntityManager dataSource) {
+        this.dataSource = (DataSource) dataSource;
     }
 
     @Override
