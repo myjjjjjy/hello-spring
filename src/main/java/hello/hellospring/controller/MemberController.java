@@ -21,7 +21,6 @@ public class MemberController {
     // 연결시켜줄 때 @Autowired 명시!
     @Autowired
     public MemberController(MemberService memberService) {
-
     this.memberService = memberService;
     }
 
